@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <h2>Calculadora</h2>
+        <input type="number" id="num1" placeholder="Número 1">
+        <input type="number" id="num2" placeholder="Número 2">
+        <br>
+        <button onclick="handleCalculation('+')">+</button>
+        <button onclick="handleCalculation('-')">-</button>
+        <button onclick="handleCalculation('*')">*</button>
+        <button onclick="handleCalculation('/')">/</button>
+        <h3>Resultado: <span id="result">0</span></h3>
+    </div>
+    <script src="operations.js"></script>
+    <script>
+        function handleCalculation(operator) {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            
+            try {
+                const result = operation(num1, num2, operator);
+                document.getElementById('result').textContent = result;
+            } catch (error) {
+                alert(error.message);
+            }
+        }
+    </script>
+</body>
+</html>
