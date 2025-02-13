@@ -17,4 +17,8 @@ Este projeto é uma simples calculadora feita em HTML, CSS e JavaScript puro. Al
    make
 Para iniciar o servidor local e rodar os testes das operações do arquivo ```operations.js```
 
+4. Para resultado dos testes mais detalhados:
+   ```sh 
+   npm test -- --coverage
+
 4. Para visualizar a calculadora entre no ```http://localhost:8080/calculator.html```
