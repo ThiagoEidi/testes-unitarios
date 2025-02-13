@@ -1,10 +1,7 @@
-all: test coverage run
+all: test run
 
 test:
 	npm test
-
-coverage:
-	npm test -- --coverage
 
 run:
 	npx live-server --open=calculator.html
